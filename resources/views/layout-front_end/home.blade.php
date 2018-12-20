@@ -22,6 +22,17 @@
             </div>
         </article>
 
+        <article>
+            <img src="images/slide03.jpg" alt="" />
+            <div class="inner">
+                <header>
+                    <p>Associazione sportiva mini-basket</p>
+                    <h2>Buffalo Basket Matinella</h2>
+                </header>
+            </div>
+        </article>
+
+
     </section>
 @endsection
 
