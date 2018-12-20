@@ -10,9 +10,6 @@
 | contains the "web" middleware group. Now create something great!
 |
 */
-// Route::get('/',function(){
-//     return view('layout-front_end.home');
-// });
 
 // homepage
 Route::get('/', 'homepageController@index')->name('home');
@@ -35,4 +32,6 @@ Route::prefix('admin')->group(function(){
     Route::get('/gallery', 'adminGalleryController@index')->name('admin.gallery');
     Route::get('/gallery/create', 'adminGalleryController@create')->name('admin.gallery.create');
     Route::post('/gallery/create', 'adminGalleryController@save')->name('admin.gallery.save');
+    Route::get('/gallery/delete/{galleries}', 'adminGalleryController@delete')->name('admin.gallery.delete');
+    Route::match(['get', 'post'], '/gallery/edit/{galleries}', 'adminGalleryController@edit')->name('admin.gallery.edit');
 });

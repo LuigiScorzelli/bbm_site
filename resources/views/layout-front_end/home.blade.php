@@ -122,22 +122,22 @@
                 <div class="gallery">
                     <div>
                         <div class="image fit">
-                            <a href="#"><img src="images/pic01.jpg" alt="" /></a>
+                            <a href="images/pic01.jpg"><img src="images/pic01.jpg" alt="" /></a>
                         </div>
                     </div>
                     <div>
                         <div class="image fit">
-                            <a href="#"><img src="images/pic02.jpg" alt="" /></a>
+                            <a href="images/pic02.jpg"><img src="images/pic02.jpg" alt="" /></a>
                         </div>
                     </div>
                     <div>
                         <div class="image fit">
-                            <a href="#"><img src="images/pic03.jpg" alt="" /></a>
+                            <a href="images/pic03.jpg"><img src="images/pic03.jpg" alt="" /></a>
                         </div>
                     </div>
                     <div>
                         <div class="image fit">
-                            <a href="#"><img src="images/pic04.jpg" alt="" /></a>
+                            <a href="images/pic04.jpg"><img src="images/pic04.jpg" alt="" /></a>
                         </div>
                     </div>
                 </div>

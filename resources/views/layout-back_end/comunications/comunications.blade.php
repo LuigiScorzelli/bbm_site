@@ -3,10 +3,16 @@
 @section('content')
 
     <div class="container">
-        <h2>Indice delle comunicazioni</h2>
-        <button type="button" class="btn btn-primary">
-            <a href="{{ route('admin.comunications.create') }}">crea</a>
-        </button>
+        <div class="header">
+            <div class="left">
+                <h2>Indice delle comunicazioni</h2>
+            </div>
+            <div class="right">
+                <button type="button" class="btn btn-primary">
+                    <a href="{{ route('admin.comunications.create') }}">crea nuovo</a>
+                </button>
+            </div>
+        </div>
         <table class="table">
             <thead>
                 <th>title</th>

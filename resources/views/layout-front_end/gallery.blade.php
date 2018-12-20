@@ -14,25 +14,68 @@
 
     <div class="container">
         <div class="row">
-            <a href="images/pic01.jpg">
-                <div class="4u"><span class="image fit"><img src="images/pic01.jpg" alt="" /></span></div>
-            </a>
-            <a href="images/pic02.jpg">
-                <div class="4u"><span class="image fit"><img src="images/pic02.jpg" alt="" /></span></div>
-            </a>
-            <a href="images/pic03.jpg">
-                <div class="4u$"><span class="image fit"><img src="images/pic03.jpg" alt="" /></span></div>
-            </a>
 
-                                    <!-- Break -->
-                <div class="4u"><span class="image fit"><img src="images/pic01.jpg" alt="" /></span></div>
-                <div class="4u"><span class="image fit"><img src="images/pic01.jpg" alt="" /></span></div>
-                <div class="4u$"><span class="image fit"><img src="images/pic01.jpg" alt="" /></span></div>
-                                    <!-- Break -->
-                <div class="4u"><span class="image fit"><img src="images/pic01.jpg" alt="" /></span></div>
-                <div class="4u"><span class="image fit"><img src="images/pic01.jpg" alt="" /></span></div>
-                <div class="4u$"><span class="image fit"><img src="images/pic01.jpg" alt="" /></span></div>
+                <div class="3u">
+                    <span class="image fit">
+                        <a href="images/pic01.jpg">
+                            <img src="images/pic01.jpg" alt="" />
+                        </a>
+                    </span>
+                </div>
+
+                <div class="3u">
+                    <span class="image fit">
+                        <a href="images/pic02.jpg">
+                            <img src="images/pic02.jpg" alt="" />
+                        </a>
+                    </span>
+                </div>
+
+                <div class="3u">
+                    <span class="image fit">
+                        <a href="images/pic03.jpg">
+                            <img src="images/pic03.jpg" alt="" />
+                        </a>
+                    </span>
+                </div>
+
+                <div class="3u">
+                    <span class="image fit">
+                        <a href="images/pic04.jpg">
+                            <img src="images/pic04.jpg" alt="" />
+                        </a>
+                    </span>
+                </div>
         </div>
+
+        <div class="row">
+
+                <div class="3u">
+                    <span class="image fit">
+                        <a href="images/pic01.jpg">
+                            <img src="images/pic01.jpg" alt="" />
+                        </a>
+                    </span>
+                </div>
+
+                <div class="3u">
+                    <span class="image fit">
+                        <a href="images/pic03.jpg">
+                            <img src="images/pic03.jpg" alt="" />
+                        </a>
+                    </span>
+                </div>
+
+                <div class="3u">
+                    <span class="image fit">
+                        <a href="images/pic02.jpg">
+                            <img src="images/pic02.jpg" alt="" />
+                        </a>
+                    </span>
+                </div>
+
+        </div>
+
     </div>
 
 @endsection

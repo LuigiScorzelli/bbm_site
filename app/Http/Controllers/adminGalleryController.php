@@ -21,20 +21,43 @@ class adminGalleryController extends Controller
 
     public function save(Request $request, Gallery $gallery){
 
-        // dd($request->file('image'));
-        Storage::putFile('/',$request->file('image'));
-        dd('ok');
 
-        // $data = $request->all();
-        //
-        // if(empty($data['timage']))
-        // {
-        //     return 'error';
-        // }
-        //
-        // $gallery = new Gallery();
-        // $gallery->fill($data);
-        // $gallery->save();
+        $data = $request->all();
+
+        if(empty($data['image']))
+        {
+            return 'error';
+        }
+
+        $gallery = new Gallery();
+        $gallery->fill($data);
+        // salvo il file img
+        $gallery->image = Storage::putFile('storage/public/img',$request->file('image'));
+
+        $gallery->save();
+
+        return redirect()->route('admin.gallery');
+    }
+
+    public function delete(Gallery $galleries){
+
+        $galleries->delete();
+
+        return redirect()->route('admin.gallery');
+    }
+
+    public function edit(Request $request,Gallery $galleries){
+
+        if($request->isMethod('get')){
+            return view('layout-back_end.gallery.edit', ['galleries' => $galleries]);
+
+        }
+        else{
+            $data = $request->all();
+            $galleries->fill($data);
+        }
+
+        $galleries->save();
 
         return redirect()->route('admin.gallery');
     }
