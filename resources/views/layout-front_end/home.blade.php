@@ -6,8 +6,8 @@
             <img src="images/slide01.jpg" alt="" />
             <div class="inner">
                 <header>
-                    <p>Associazione sportiva mini-basket</p>
-                    <h2>Buffalo Basket Matinella</h2>
+                    <p>Associazione sportiva basket</p>
+                    <h2>B.B.M.</h2>
                 </header>
             </div>
         </article>
@@ -16,8 +16,8 @@
             <img src="images/slide02.jpg" alt="" />
             <div class="inner">
                 <header>
-                    <p>Associazione sportiva mini-basket</p>
-                    <h2>Buffalo Basket Matinella</h2>
+                    <p>Associazione sportiva basket</p>
+                    <h2>Buffalo Basket Matinella</h2> 
                 </header>
             </div>
         </article>
@@ -26,8 +26,8 @@
             <img src="images/slide03.jpg" alt="" />
             <div class="inner">
                 <header>
-                    <p>Associazione sportiva mini-basket</p>
-                    <h2>Buffalo Basket Matinella</h2>
+                    <p>Associazione sportiva basket</p>
+                    <h2>B.B.M.</h2>
                 </header>
             </div>
         </article>
@@ -37,7 +37,6 @@
 @endsection
 
 @section('content')
-    <!--	My section for description -->
     <section>
         <div class="container">
             <div class="inner">
@@ -49,7 +48,7 @@
                             </div>
                             <div class="content">
                                 <header class="align-center">
-                                    <h2>B.B.M. Basket</h2>
+                                    <h2>Buffalo Basket Matinella</h2>
                                 </header>
                                     <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
                             </div>
@@ -81,7 +80,7 @@
                             </div>
                         </div>
                     </div>
-
+                <!-- two  video -->
                     <div>
                         <div class="box">
                             <div class="image fit">
@@ -113,33 +112,26 @@
             </div>
         </section>
 
-    <!-- Three  gallery -->
+    <!-- gallery home -->
         <section id="three" class="wrapper style2">
             <div class="inner">
                 <header class="align-center">
                     <h2>GALLERY</h2>
                 </header>
-                <div class="gallery">
-                    <div>
-                        <div class="image fit">
-                            <a href="images/pic01.jpg"><img src="images/pic01.jpg" alt="" /></a>
+             
+                <div class="container">
+                    <section>
+                        <h2 class="text-center">mini-basket</h2>
+                        <div class="gallery">
+                            
+                            @foreach ($data['galleries'] as $gallery)
+                                <div class="image fit">
+                                    <img src="{{ asset($gallery->name) }}"  alt="image">
+                                </div>
+                            @endforeach 
+                            
                         </div>
-                    </div>
-                    <div>
-                        <div class="image fit">
-                            <a href="images/pic02.jpg"><img src="images/pic02.jpg" alt="" /></a>
-                        </div>
-                    </div>
-                    <div>
-                        <div class="image fit">
-                            <a href="images/pic03.jpg"><img src="images/pic03.jpg" alt="" /></a>
-                        </div>
-                    </div>
-                    <div>
-                        <div class="image fit">
-                            <a href="images/pic04.jpg"><img src="images/pic04.jpg" alt="" /></a>
-                        </div>
-                    </div>
+                    </section>
                 </div>
             </div>
         </section>

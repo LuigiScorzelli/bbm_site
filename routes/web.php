@@ -19,6 +19,8 @@ Route::get('/gallery', 'galleryController@index')->name('gallery');
 Route::get('/comunications', 'comunicationsController@index')->name('comunications');
 // page contact
 Route::get('/contact', 'contactController@index')->name('contact');
+Route::post('/contact', 'contactController@mail')->name('contact.mail');
+// Route::match(['get', 'post'], '/contact', 'contactController@index')->name('contact.save');
 
 Route::prefix('admin')->group(function(){
     // admin comunications
@@ -34,4 +36,5 @@ Route::prefix('admin')->group(function(){
     Route::post('/gallery/create', 'adminGalleryController@save')->name('admin.gallery.save');
     Route::get('/gallery/delete/{galleries}', 'adminGalleryController@delete')->name('admin.gallery.delete');
     Route::match(['get', 'post'], '/gallery/edit/{galleries}', 'adminGalleryController@edit')->name('admin.gallery.edit');
+
 });

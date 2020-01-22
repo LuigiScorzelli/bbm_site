@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use Illuminate\Support\Facades\Storage;
 use Illuminate\Http\Request;
 use App\comunication;
 
@@ -19,14 +20,21 @@ class adminComunicationsController extends Controller
 
     public function save(Request $request, comunication $comunication){
         $data = $request->all();
+        
 
         if(empty($data['title']) || empty($data['text']))
         {
             return 'error';
         }
 
+        Storage::putFile('/', $request->file('image'));
+        
+        $data = $request->all();
         $comunication = new comunication();
         $comunication->fill($data);
+        
+        $imageURL = Storage::putFile('public/upload', $request->file('image'));
+        $comunication->image = str_replace("public", "storage", $imageURL);
         $comunication->save();
 
         return redirect()->route('admin.comunications');

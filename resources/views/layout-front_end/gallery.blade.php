@@ -3,79 +3,26 @@
     <section id="One" class="wrapper style3">
         <div class="inner">
             <header class="align-center">
-                <p>GALLERY</p>
-                <h2>Buffalo Basket Matinella</h2>
+                <p>Buffalo Basket Matinella</p>
+                <h2>gallery</h2>
             </header>
         </div>
     </section>
 @endsection
 @section('content')
-
-
     <div class="container">
-        <div class="row">
+        <section>
+            <h2 class="text-center">mini-basket</h2>
+            <div class="gallery">
 
-                <div class="3u">
-                    <span class="image fit">
-                        <a href="images/pic01.jpg">
-                            <img src="images/pic01.jpg" alt="" />
-                        </a>
-                    </span>
-                </div>
+                @foreach ($data['galleries'] as $gallery)
+                    <div class="image fit">
+                        <img src="{{ asset($gallery->name) }}"  alt="image">
+                    </div>
+                @endforeach
+                
+            </div>
 
-                <div class="3u">
-                    <span class="image fit">
-                        <a href="images/pic02.jpg">
-                            <img src="images/pic02.jpg" alt="" />
-                        </a>
-                    </span>
-                </div>
-
-                <div class="3u">
-                    <span class="image fit">
-                        <a href="images/pic03.jpg">
-                            <img src="images/pic03.jpg" alt="" />
-                        </a>
-                    </span>
-                </div>
-
-                <div class="3u">
-                    <span class="image fit">
-                        <a href="images/pic04.jpg">
-                            <img src="images/pic04.jpg" alt="" />
-                        </a>
-                    </span>
-                </div>
-        </div>
-
-        <div class="row">
-
-                <div class="3u">
-                    <span class="image fit">
-                        <a href="images/pic01.jpg">
-                            <img src="images/pic01.jpg" alt="" />
-                        </a>
-                    </span>
-                </div>
-
-                <div class="3u">
-                    <span class="image fit">
-                        <a href="images/pic03.jpg">
-                            <img src="images/pic03.jpg" alt="" />
-                        </a>
-                    </span>
-                </div>
-
-                <div class="3u">
-                    <span class="image fit">
-                        <a href="images/pic02.jpg">
-                            <img src="images/pic02.jpg" alt="" />
-                        </a>
-                    </span>
-                </div>
-
-        </div>
-
+        </section>
     </div>
-
 @endsection

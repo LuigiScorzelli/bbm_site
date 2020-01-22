@@ -57,6 +57,38 @@
 		box-sizing: border-box;
 	}
 
+/* navbar desktop  */
+
+.nav-dsk{
+	height: 80px;
+	display: flex;
+	background: #db9232;
+	/* position: sticky; */
+	/* z-index: 10001; */
+	/* position: static;
+	top: 0; */
+}
+.nav-container{
+	width: 60%;
+	height: 100%;
+	margin: 0 auto;
+}
+.nav-container a{
+	text-decoration: none;
+	color: #fff;
+}
+.nav-container a:hover{
+	text-decoration: underline;
+	color: #271ea8;
+}
+.nav-container ul{
+	list-style: none;
+}
+.nav-container li{
+	display: inline-block;
+	margin: 2% 5%;
+	font-size: 20px;
+}
 /* Containers */
 
 	.container {
@@ -67,7 +99,8 @@
 		width: 70%;
 		height: auto;
 		text-align: center;
-		float: left;
+		margin: 0 auto;
+		/* float: left; */
 	}
 	.container .right{
 		width: 30%;
@@ -79,8 +112,15 @@
 		width: 100%;
 		height: auto;
 		padding: 2%;
-		border-bottom: 1px solid black;
+		/* border-bottom: 1px solid black; */
 		margin-bottom: 2%;
+		display: flex;
+		align-items: center;
+		justify-content: center;
+	}
+	.items img{
+		width: 70%;
+		height: 30%;
 	}
 	.container.\31 25\25 {
 		width: 100%;
@@ -1714,6 +1754,11 @@
 	h2 {
 		font-size: 1.75rem;
 	}
+	section h2{
+		text-align: center;
+		margin: 3%;
+		text-transform: uppercase;
+	}
 
 	h3 {
 		font-size: 1.35rem;
@@ -3128,7 +3173,7 @@
 		.wrapper.style3 {
 			background-color: #000;
 			color: #bfbfbf;
-			background-image: url(../../images/bg.jpg);
+			background-image: url(../../images/header.jpg);
 			background-size: cover;
 			background-attachment: fixed;
 			background-position: center;
@@ -3584,7 +3629,7 @@
 
 		.gallery > * {
 			/* width: 50%; */
-			width: 25%;
+			width: 15%;
 		}
 
 		.gallery > * {
@@ -4315,10 +4360,32 @@
 /* Footer */
 
 	#footer {
-		padding: 4rem 0 2rem 0 ;
 		background: #000;
-		text-align: center;
+		color: #fff;
 	}
+	.container-footer{
+		width: 80%;
+		height: 100%;
+		margin: 0 auto;
+		display: flex;
+	}
+	#footer .item-footer{
+	    width: calc(100% / 3);
+	    height: auto;
+		padding: 2%;
+		margin-left: 50px;
+	    /* background: red; */
+	}
+		#footer .item-footer h3{
+			color: #fff;
+		}
+		#footer .item-footer ul{
+			list-style: none;
+		}
+		#footer .item-footer img{
+			height: 70%;
+			width: 100%;
+		}
 
 		#footer a {
 			color: rgba(255, 255, 255, 0.5);
@@ -4327,14 +4394,6 @@
 			#footer a:hover {
 				color: #FFF;
 			}
-
-		#footer .copyright {
-			color: #bbb;
-			font-size: 0.9rem;
-			margin: 0 0 2rem 0;
-			padding: 0;
-			text-align: center;
-		}
 
 		@media screen and (max-width: 736px) {
 

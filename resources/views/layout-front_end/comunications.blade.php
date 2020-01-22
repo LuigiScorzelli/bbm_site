@@ -5,8 +5,8 @@
         <section id="One" class="wrapper style3">
             <div class="inner">
                 <header class="align-center">
-                    <p>GALLERY</p>
-                    <h2>Buffalo Basket Matinella</h2>
+                    <p>Buffalo Basket Matinella</p>
+                    <h2>COMUNICAZIONI</h2>
                 </header>
             </div>
         </section>
@@ -15,31 +15,33 @@
 @endsection
 
 @section('content')
-    <div class="container">
-        <section>
-            <div class="left">
-                <h2>Ultime Comunicazioni</h2>
-                
-                @foreach ($data['comunications'] as $comunication)
-                    <div class="items">
-                        <h3>{{ $comunication->title}}</h3>
-                        <small><i>{{ $comunication->author}}</i>{{ $comunication->created_at}}</small>
-                        <p>{{ $comunication->text }}<p>
+
+    <section class="wrapper style3">
+    <h2>Ultime Comunicazioni</h2>
+        @foreach ($data['comunications'] as $comunication)
+        <!-- <section class="wrapper style2"> -->
+        <div class="inner">
+            <div class="grid-style items">
+                <div>
+                    <div class="box">
+                        <div class="image fit">
+                            <img src="{{ asset($comunication->image) }}" alt="">
+                        </div>
+                        <div class="content">
+                            <header class="align-center">
+                                <h3>{{ $comunication->title}}</h3>
+                                <small><i>{{ $comunication->author}}</i>{{ $comunication->created_at}}</small>
+                            </header>
+                            <p> Cras aliquet urna ut sapien tincidunt, quis malesuada elit facilisis. Vestibulum sit amet tortor velit. Nam elementum nibh a libero pharetra elementum. Maecenas feugiat ex purus, quis volutpat lacus placerat malesuada.</p>
+                            <footer class="align-center">
+                                <a href="#" class="button special">Learn More</a>
+                            </footer>
+                        </div>
                     </div>
-                @endforeach
-
-            </div>
-            <div class="right">
-
-                <ul>
-                    <li><h3>Documenti</h3></li>
-                </ul>
-
-                <ul>
-                    <li><h3>Comunicazioni</h3></li>
-                </ul>
-            </div>
-            <div class="flex" style="clear: both"></div>
-        </section>
-    </div>
+                </div>
+            </div>      
+        </div>
+        <!-- </section> -->
+        @endforeach
+    </section>
 @endsection

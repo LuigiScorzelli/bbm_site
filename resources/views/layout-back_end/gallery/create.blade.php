@@ -13,6 +13,7 @@
                     <label for="descriptions"><h3>inserisci il testo</h3></label>
                     <textarea class="form-control" name="descriptions" rows="8" cols="80"></textarea>
 
+                    <label for="image">Inserisci un immagine</label>
                     <input type="file" name="image" accept="image/*">
 
                    <div class="box-button">

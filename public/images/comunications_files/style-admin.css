@@ -40,8 +40,3 @@ main{
 button a{
     color: white;
 }
-.imageCard {
-    width: 30px;
-    height: 40px;
-    overflow: hidden;
-}

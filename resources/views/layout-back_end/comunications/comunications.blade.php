@@ -18,10 +18,12 @@
                 <th>title</th>
                 <th>autore</th>
                 <th>testo</th>
+                <th>image</th>
                 <th>is_active</th>
                 <th>creato il:</th>
                 <th>modifica</th>
                 <th>cancella</th>
+                <th>file pdf</th>
             </thead>
             <tbody>
                 @foreach ($comunications as $comunication)
@@ -29,6 +31,7 @@
                         <td>{{ $comunication->title }}</td>
                         <td>{{ $comunication->author }}</td>
                         <td>{{ $comunication->text }}</td>
+                        <td>{{ $comunication->image }}</td>
                         <td>{{ $comunication->is_active }}</td>
                         <td>{{ \Carbon\Carbon::parse($comunication->created_at)->format('d/m/Y H:i:s') }}</td>
                         <td>
